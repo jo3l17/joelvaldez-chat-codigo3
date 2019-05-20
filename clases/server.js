@@ -67,10 +67,10 @@ class Server {
         });
     }
     asignarRutas() {
-        //este bota un error porque se ejecuta primero
-        /*this.app.use('/',(req,res)=>{
+        
+        this.app.get('/',(req,res)=>{
             res.send("buenas");
-        });*/
+        });
         this.app.post('/enviar-mensaje', (req, res) => {
             let { para, mensaje, de } = req.body;
             let content = {
